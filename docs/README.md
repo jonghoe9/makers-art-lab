@@ -10,9 +10,3 @@
 * 물리적인 장치와 연동해서 화면의 움직임이 장치의 움직임으로 표현될 수 있게 한다.
 * 프로세싱의 기능을 학습하기 위한 프로젝트
 * 아두이노와 연동, 시리얼 통신, 클라스 사용, 벡터 사용 학습
-
-
-## Processing & Arduino
-
-* [Processing Code](01_Processing)
-* [Arduino Code](02_Arduino)
