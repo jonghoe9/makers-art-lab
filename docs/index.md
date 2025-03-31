@@ -1,5 +1,5 @@
 # Welcome MAL
-Makers Art Lab
+^^Makers Art Lab^^
 
 간단한 프로젝트를 구현하는 과정에서 프로세싱, 아두이노 코딩을 학습한다.
 
@@ -11,4 +11,3 @@ Makers Art Lab
 * 프로세싱의 기능을 학습하기 위한 프로젝트
 * 아두이노와 연동, 시리얼 통신, 클라스 사용, 벡터 사용 학습
 
-https://jonghoe9.github.io/makers-art-lab/
