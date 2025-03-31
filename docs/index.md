@@ -5,7 +5,7 @@
 
 ## Projects List
 
-![실행한 모습](../img/project_clock_arrow.png)
+![실행한 모습](img/project_clock_arrow.png)
 
 ### 바늘 1개 시계
 * 바늘이 하나 있는 시계, 마우스를 따라 움직인다.
