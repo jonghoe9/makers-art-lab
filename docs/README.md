@@ -7,7 +7,7 @@ Makers Art Lab
 
 ### 바늘 1개 시계
 
-![실행한 모습](../img/peoject_clock_arrow.png)
+![실행한 모습](../img/project_clock_arrow.png)
 
 * 바늘이 하나 있는 시계, 마우스를 따라 움직인다.
 * 물리적인 장치와 연동해서 화면의 움직임이 장치의 움직임으로 표현될 수 있게 한다.
