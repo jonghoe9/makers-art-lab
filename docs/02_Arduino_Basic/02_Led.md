@@ -1,4 +1,4 @@
-# LED 켜보기
+# 2. 아두이노에서 LED 켜보기
 
 ```cpp title="led-blink.ino" linenums="1" hl_lines="1"
 const int led = 13;

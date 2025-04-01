@@ -1,4 +1,4 @@
-# Volume, Input Sensor
+# 6. 입력센서 Volume 사용하기
 
 ```cpp title="volumeSerial.ino" linenums="1" hl_lines="9"
 const int vol_pin = A0;

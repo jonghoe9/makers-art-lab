@@ -1,4 +1,4 @@
-# Servo Motor (RC)
+# 4. Servo 모터 사용하기
 
 
 ```cpp title="servo.ino" linenums="1" hl_lines="1"
