@@ -2,6 +2,10 @@
 
 서서히 밝아지고 서서히 꺼지는 LED를 구현해 보자.
 
+## 코드 1. LED 밝기 조절
+
+![빵판에 LED와 저항 연결](../img/ard-led-blink.png)
+
 ```cpp title="led-for-loop1.ino" linenums="1" hl_lines="1"
 const int led_pin = 13;
 
@@ -21,6 +25,9 @@ void loop() {
 }
 ```
 
+## 코드 2. LED 3구성, 컬러 밝기 조절
+
+![빵판에 LED와 저항 연결](../img/ard-led3color.png)
 
 ```cpp title="led-for-loop2.ino" linenums="1" hl_lines="1"
 const int red = 9;

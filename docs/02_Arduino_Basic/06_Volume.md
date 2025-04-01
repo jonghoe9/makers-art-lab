@@ -1,5 +1,9 @@
 # 6. 입력센서 Volume 사용하기
 
+## 코드 1. 볼륨값 읽기
+
+![빵판에 볼륨 연결](../img/ard-volume.png)
+
 ```cpp title="volumeSerial.ino" linenums="1" hl_lines="9"
 const int vol_pin = A0;
 
@@ -14,6 +18,9 @@ void loop() {
   delay(10);
 }
 ```
+
+
+## 코드 2. 볼륨값을 시리얼 그래프로 보기
 
 ```cpp title="volumeGraph.ino" linenums="1" hl_lines="11-14"
 const int vol_pin = A0;
@@ -34,6 +41,9 @@ void loop() {
   delay(10);
 }
 ```
+
+
+## 코드 3. 볼륨값을 시리얼 모니터로 보면서 LED 밝기 조절
 
 ```cpp title="volumeLed.ino" linenums="1" hl_lines="12"
 const int vol_pin = A0;
@@ -60,11 +70,14 @@ void loop() {
 }
 ```
 
+
+## 코드 4. 볼륨값을 시리얼 모니터로 보면서 서보모터 제어
+
 ```cpp title="volumeServo.ino" linenums="1" hl_lines="17"
 #include <Servo.h>
 
 const int vol_pin = A0;
-const int servo_pin
+const int servo_pin = 9;
 
 Servo sv;
 

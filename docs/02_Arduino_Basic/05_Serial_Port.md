@@ -2,8 +2,11 @@
 
 시리얼 포트를 사용해 보자.
 
+
+## 코드 1. LED 밝기 값을 Serial로 출력
+
 ```cpp title="serialWrite.ino" linenums="1" hl_lines="5"
-const int led = 9;
+const int led = 13;
 
 void setup() {
     pinMode(red, OUTPUT);
@@ -20,6 +23,9 @@ void loop() {
     delay(2000);
 }
 ```
+
+
+## 코드 2. Serial로 LED 2개 밝기 조절
 
 ```cpp title="serialRead.ino" linenums="1" hl_lines="12-15"
 const int led1 = 9;
@@ -46,6 +52,12 @@ void loop() {
     }
 }
 ```
+
+* 시리얼 모니터로 값을 2개 입력해 보자 (예: 120, 200)
+* 입력 값은 쉼표로 구분하여 숫자 2개를 입력한다.
+
+
+## 코드 3. 시리얼로 서보모터 제어
 
 ```cpp title="serialReadServo.ino" linenums="1" hl_lines="20-21"
 #include <Servo.h>
