@@ -3,7 +3,7 @@
 * PCA9684를 이용해 서보모터 2개를 여러개 연결하고 제어한다.
 * 시리얼 포트로 값을 입력하면(쉼표로 구분 2개 값)
 
-```cpp title="pca9685_servo.ino" linenums="1" hl_lines="29-30"
+```cpp title="pca9685_servo.ino" linenums="1" hl_lines="30-31"
 //
 // PCA96885 Wiring
 // SCL -> A4
