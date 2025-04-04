@@ -1,20 +1,23 @@
-# Circle Arrow with PCA9585
+# Circle Arrow with PCA9684
 
-```cpp title="serialWrite.ino" linenums="1" hl_lines="30-36"
+PCA9684를 이용해 서보모터를 여러개 연결하고 제어한다.
+
+```cpp title="serialWrite.ino" linenums="1" hl_lines="26-32"
 #include <Adafruit_PWMServoDriver.h>
-Adafruit_PWMServoDriver board1 = Adafruit_PWMServoDriver(0x40);
-
-#define SERVOMIN  125
-#define SERVOMAX  625
 
 #define sv1 0
 #define sv2 1
 
+#define SERVOMIN  125
+#define SERVOMAX  625
+
+Adafruit_PWMServoDriver sv_brd = Adafruit_PWMServoDriver(0x40);
+
 void setup() {
     Serial.begin(115200);
     Serial.println("===== Serial Port Ready =====");
-    board1.begin();
-    board1.setPWMFreq(60);
+    sv_brd.begin();
+    sv_brd.setPWMFreq(60);
 }
 
 void loop() {
@@ -30,8 +33,8 @@ void loop() {
 
         if(Serial.read() == '\n') {
           
-            board1.setPWM(sv1, 0, val1pulse);
-            board1.setPWM(sv2, 0, val2pulse);
+            sv_brd.setPWM(sv1, 0, val1pulse);
+            sv_brd.setPWM(sv2, 0, val2pulse);
 
             Serial.print(val1);
             Serial.print(", ");
