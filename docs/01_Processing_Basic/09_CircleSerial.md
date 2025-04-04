@@ -122,6 +122,9 @@ int getDeg(float angle) {
     return (int) deg;
 }
 
+//
+// 여기에 Class 코드를 넣으세요 !!
+//
 ```
 
 * 시리얼포트 관련 Line 1, 3, 10 내용이 새롭게 추가된 것이다.
