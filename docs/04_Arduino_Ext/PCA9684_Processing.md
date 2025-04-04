@@ -1,8 +1,13 @@
-# Circle Arrow with PCA9684
+# Circle Arrow with PCA9685
 
 PCA9684를 이용해 서보모터를 여러개 연결하고 제어한다.
 
-```cpp title="serialWrite.ino" linenums="1" hl_lines="26-32"
+```cpp title="serialWrite.ino" linenums="1" hl_lines="31-37"
+//
+// PCA96885 Wiring
+// SCL -> A4
+// SDA -> A5
+//
 #include <Adafruit_PWMServoDriver.h>
 
 #define sv1 0
