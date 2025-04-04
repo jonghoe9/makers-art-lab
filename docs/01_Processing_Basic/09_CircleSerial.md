@@ -108,9 +108,9 @@ void draw() {
     ca1.show(mouseX, mouseY);
     ca2.show(mouseX, mouseY);
     
-    int deg1 = getDeg(ca1.ta);
-    int deg2 = getDeg(ca2.ta);
-    port.write(dog1 + ", " + deg2 + '\n');
+    int deg1 = getDeg(ca1.ta) / 2;
+    int deg2 = getDeg(ca2.ta) / 2;
+    port.write(deg1 + ", " + deg2 + '\n');
 
     line(0, mouseY, width, mouseY);
     line(mouseX, 0, mouseX, height);

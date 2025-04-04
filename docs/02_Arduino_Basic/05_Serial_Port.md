@@ -76,8 +76,8 @@ void setup() {
 
 void loop() {
     while(Serial.available() > 0) {
-        val1 = Serial.parseInt();
-        val2 = Serial.parseInt();
+        int val1 = Serial.parseInt();
+        int val2 = Serial.parseInt();
         
         val1 = constrain(val1, 0, 180);
         val2 = constrain(val2, 0, 180);
