@@ -15,11 +15,6 @@ void setup() {
     Serial.println("===== Serial Port Ready =====");
     board1.begin();
     board1.setPWMFreq(60);
-
-    for(int i=0; i<8; i++) {
-      board1.setPWM(i, 0, angleToPulse(0) );
-    }
-    delay(1000);
 }
 
 void loop() {
