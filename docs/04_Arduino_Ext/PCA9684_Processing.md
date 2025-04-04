@@ -3,7 +3,7 @@
 * PCA9684를 이용해 서보모터 2개를 여러개 연결하고 제어한다.
 * 시리얼 포트로 값을 입력하면(쉼표로 구분 2개 값)
 
-```cpp title="pca9685_servo.ino" linenums="1" hl_lines="31-37"
+```cpp title="pca9685_servo.ino" linenums="1" hl_lines="29-30"
 //
 // PCA96885 Wiring
 // SCL -> A4
@@ -22,6 +22,7 @@ Adafruit_PWMServoDriver sv_brd = Adafruit_PWMServoDriver(0x40);
 void setup() {
     Serial.begin(115200);
     Serial.println("===== Serial Port Ready =====");
+
     sv_brd.begin();
     sv_brd.setPWMFreq(60);
 }
@@ -31,21 +32,19 @@ void loop() {
         int val1 = Serial.parseInt();
         int val2 = Serial.parseInt();
 
-        val1 = constrain(val1, 0, 180);
-        val2 = constrain(val2, 0, 180);
-
-        int val1pulse = map(val1, 0, 180, SERVOMIN, SERVOMAX);
-        int val2pulse = map(val2, 0, 180, SERVOMIN, SERVOMAX);
-
         if(Serial.read() == '\n') {
-          
-            sv_brd.setPWM(sv1, 0, val1pulse);
-            sv_brd.setPWM(sv2, 0, val2pulse);
+            sv_brd.setPWM(sv1, 0, servoPulse(val1));
+            sv_brd.setPWM(sv2, 0, servoPulse(val2));
 
             Serial.print(val1);
             Serial.print(", ");
             Serial.println(val2);
         }
     }
+}
+
+int servoPulse(int angle) {
+    int pulse = constrain(angle, 0, 180);
+    return map(pulse, 0, 180, SERVO_MIN, SERVO_MAX);
 }
 ```
