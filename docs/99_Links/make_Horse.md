@@ -1,21 +1,21 @@
 # 말 만들기
 
-- [https://www.youtube.com/shorts/pC7YOP1z-oQ](https://www.youtube.com/shorts/pC7YOP1z-oQ)
-- [https://www.youtube.com/watch?v=LZkyNJ93M88](https://www.youtube.com/watch?v=LZkyNJ93M88)
-- [https://www.youtube.com/watch?v=GH4N9sDNMss](https://www.youtube.com/watch?v=GH4N9sDNMss)
-- [https://www.youtube.com/watch?v=eTa0zdr1f8I](https://www.youtube.com/watch?v=eTa0zdr1f8I)
-- [https://www.youtube.com/watch?v=iMv8wTc2e3U](https://www.youtube.com/watch?v=iMv8wTc2e3U)
-- [https://www.youtube.com/watch?v=AEglMduLljY](https://www.youtube.com/watch?v=AEglMduLljY)
-- [https://www.youtube.com/watch?v=Ihf4oYr0YDA](https://www.youtube.com/watch?v=Ihf4oYr0YDA)
-- [https://www.youtube.com/watch?v=38DgnJAg6ac](https://www.youtube.com/watch?v=38DgnJAg6ac)
-- [https://www.youtube.com/watch?v=5nkDzWr-Utg](https://www.youtube.com/watch?v=5nkDzWr-Utg)
-- [https://www.youtube.com/watch?v=DfznnKUwywQ](https://www.youtube.com/watch?v=DfznnKUwywQ)
-- [https://www.youtube.com/watch?v=DfznnKUwywQ](https://www.youtube.com/watch?v=DfznnKUwywQ)
-- [https://www.youtube.com/watch?v=YIr00xJEqHM](https://www.youtube.com/watch?v=YIr00xJEqHM)
-- [https://www.youtube.com/watch?v=l1-U5Rgf_SE](https://www.youtube.com/watch?v=l1-U5Rgf_SE)
-- [https://www.youtube.com/watch?v=XM8bbjPWgv0](https://www.youtube.com/watch?v=XM8bbjPWgv0)
-- [https://www.youtube.com/watch?v=nsDxchPtY4I](https://www.youtube.com/watch?v=nsDxchPtY4I)
-- [https://www.youtube.com/watch?v=5W7SDjmTiQk](https://www.youtube.com/watch?v=5W7SDjmTiQk)
-- [https://www.youtube.com/watch?v=0SSveGAOsdU](https://www.youtube.com/watch?v=0SSveGAOsdU)
-- [https://www.youtube.com/watch?v=zer4RDTqzhk](https://www.youtube.com/watch?v=zer4RDTqzhk)
-- [https://www.youtube.com/shorts/N9XeR3yDbRM](https://www.youtube.com/shorts/N9XeR3yDbRM)
+- [/shorts/pC7YOP1z-oQ](https://www.youtube.com/shorts/pC7YOP1z-oQ) Horse Simulation
+- [shorts/N9XeR3yDbRM](https://www.youtube.com/shorts/N9XeR3yDbRM) Horse Automata
+- [LZkyNJ93M88](https://www.youtube.com/watch?v=LZkyNJ93M88) **Neil Hendry Kinetic horse**
+- [GH4N9sDNMss](https://www.youtube.com/watch?v=GH4N9sDNMss) Automata horse 2.
+- [eTa0zdr1f8I](https://www.youtube.com/watch?v=eTa0zdr1f8I) Cowboy Automaton
+- [iMv8wTc2e3U](https://www.youtube.com/watch?v=iMv8wTc2e3U) Lo Fi Automata Equis
+- [AEglMduLljY](https://www.youtube.com/watch?v=AEglMduLljY) Front Leg
+- [Ihf4oYr0YDA](https://www.youtube.com/watch?v=Ihf4oYr0YDA) Automata Equis Actual
+- [38DgnJAg6ac](https://www.youtube.com/watch?v=38DgnJAg6ac) The Golden Mechanical Horse by Adrian Landon
+- [5nkDzWr-Utg](https://www.youtube.com/watch?v=5nkDzWr-Utg) Running Horse Automata
+- [DfznnKUwywQ](https://www.youtube.com/watch?v=DfznnKUwywQ) Computational Design of Mechanical Characters
+- [YIr00xJEqHM](https://www.youtube.com/watch?v=YIr00xJEqHM) Galloping Horse Mechanism - Autodesk Inventor Animation
+- [l1-U5Rgf_SE](https://www.youtube.com/watch?v=l1-U5Rgf_SE) Mechanical Horse 16:9
+- [XM8bbjPWgv0](https://www.youtube.com/watch?v=XM8bbjPWgv0) **AUTOMATA　HORSE　RUN**
+- [nsDxchPtY4I](https://www.youtube.com/watch?v=nsDxchPtY4I) Horse automaton
+- [5W7SDjmTiQk](https://www.youtube.com/watch?v=5W7SDjmTiQk) Running Horse Mechanism Motion Study SolidWorks
+- [0SSveGAOsdU](https://www.youtube.com/watch?v=0SSveGAOsdU) Mechanisches Pferd - kinetic horse / Werner Gergaut
+- [er4RDTqzhk](https://www.youtube.com/watch?v=zer4RDTqzhk) running horse mechanism
+- [VnO_5-aXFEA](https://www.youtube.com/watch?v=VnO_5-aXFEA) **A horse in motion - a wooden horse** 아마존 판매
