@@ -13,4 +13,4 @@
 - NDI 연결
 
 - Capture Tutorial
-    - [Capture Tutorial Youtube](https://www.youtube.com/playlist?list=PLPyD1ylvBYvRvIeN-L77OHbGRYKorp9Fx)
+    - [Capture Tutorial List Youtube](https://www.youtube.com/playlist?list=PLPyD1ylvBYvRvIeN-L77OHbGRYKorp9Fx)
