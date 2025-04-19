@@ -29,3 +29,10 @@ void loop() {
 * 초음파는 28us 마다 1cm 이동
 * 초음파가 왕복 했으므로 28 * 2 해서 58, 58이면 2cm
 * 측정범위 2cm ~ 4m
+
+## pulseIn()
+- `pulseIn(pin, valuse);` value가 HIGH 이면 시작 부터 HIGH 될때 까지의 시간, us 단위
+- 대기시간은 10us ~ 3min
+- 대기시간 변경 가능, us 단위, 기본값은 1초 (1,000,000 us)
+- `pulseIn(pin, valuse, timeout);` 형식
+- 반환값 : `unsigned long`
