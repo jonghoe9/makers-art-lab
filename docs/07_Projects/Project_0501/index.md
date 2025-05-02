@@ -1,0 +1,6 @@
+# 초음파 센서 Project
+1. [아두이노 1](/07_Projects/Project_0501/01_Arduino_1/) : 초음파 센서 사용하여 거리 측정 (사람이 다가오는지 측정)
+1. [아두이노 2](/07_Projects/Project_0501/01_Arduino_2/) : 거리 측정 값을 프로세싱으로 보내기 (시리얼 통신)
+1. [프로세싱 1](/07_Projects/Project_0501/02_Processing/) : 시리얼 데이터 읽기
+1. [프로세싱 2](/07_Projects/Project_0501/03_OSC_Send/) : 아두이노 데이터를 OSC로 보내기
+1. 매드매퍼 : 프로세싱에서 보낸 OSC를 읽어 반영한다.
