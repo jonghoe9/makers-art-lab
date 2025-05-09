@@ -130,7 +130,7 @@ int cntLoop = 1;
 Boolean chkPause = false; 
 
 void setup() {
-    fullScreen();
+    //fullScreen();
     size(800, 500);
     scrW = width;
     scrH = (int)(width * 9/16);
