@@ -47,7 +47,7 @@ printArray(Serial.list());
 
 ## Serial Read
 
-```java title="proc-008-read.pde" linenums="1" hl_lines="18-24"
+```java title="proc-008-read.pde" linenums="1" hl_lines="21-27"
 import processing.serial.*;
 
 Serial port;
@@ -69,7 +69,7 @@ void draw() {
 }
 
 void serialEvent(Serial port) {
-    String str = port.readStringUntil("\n");
+    String str = port.readStringUntil('\n');
     if(str != null) {
         String s = trim(str);
         sData = int(s);
