@@ -1,15 +1,21 @@
 # 60. Data View
 
-* 센서값을 그래프로 출력하기
+센서값을 그래프로 출력하기
+
+![실행한 모습](../img/sensorGraph.png)
+
+
 
 ## 아두이노 프로그램
 * 센서 2개를 읽고 시리얼로 출력한다.
+* 스위치 입력 1개 추가, 총 3개 데이터를 출력한다.
 * 데이터는 쉼표 `, `로 구분한다.
 * 데이터의 끝은 줄넘김 `\n` 이다.
 
 ```cpp title="sensorRead.ino" linenums="1" hl_lines="13"
 void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
+    pinMode(7, INPUT);
     Serial.begin(115200);
 }
 
@@ -17,10 +23,15 @@ void loop() {
     digitalWrite(LED_BUILTIN, HIGH);
     int val1 = analogRead(A0);
     int val2 = analogRead(A1);
+    int val3 = digitalRead(7);
+    if(val3 == HIGH) val3 = 1000;
+    else val3 = 0;
     digitalWrite(LED_BUILTIN, LOW);
     Serial.print(val1);
     Serial.print(", ");
-    Serial.println(val2);
+    Serial.print(val2);
+    Serial.print(", ");
+    Serial.println(val3);
 }
 ```
 
@@ -155,7 +166,6 @@ void loop() {
             }
         }
         
-        
         SensorGraphMatrix(String tag, int x, int y, int w, int h,
                                     int data_set, int time_interval) {
             posX = x;
@@ -219,10 +229,13 @@ void loop() {
             stroke(boxCenterLine);
             line(posX, posY + boxH /2, posX +boxW, posY + boxH /2);
             // Time Line
+            float t_total = cnt_data * t_int;
             for(int i=0; i <= 10; i++) {
-                line(posX + (i * boxW / 10),  posY +boxH, posX + (i * boxW / 10), posY +boxH +10);
+                line(   posX + (i * boxW / 10),  posY +boxH,
+                        posX + (i * boxW / 10), posY +boxH +10);
                 fill(boxCenterLine);
-                text(t_int * 10* (10-i), posX + (i * boxW / 10) -5,  posY +boxH +24);
+                text(   nf(t_total - (i * t_total/10), 0, 0),
+                        posX + (i * boxW / 10) -5,  posY +boxH +24);
                 noFill();
             }
             
@@ -236,7 +249,9 @@ void loop() {
                     line(x1, y1, x2, y2);
                 }
                 fill(graphColor[j]);
-                text(nf(data[j][cnt_data-1], 0, 3), posX +boxW +10, posY +boxH -1 -(g_height * (data[j][cnt_data-1]+1) / dataMax[j]));
+                text(   nf(data[j][cnt_data-1], 0, 3),
+                        posX +boxW +10,
+                        posY +boxH -1 -(g_height * (data[j][cnt_data-1]+1) / dataMax[j]));
                 noFill();
             }
             // Trigger & Squalch
@@ -270,7 +285,8 @@ void loop() {
         }
         
         Boolean isClick() {
-            if((mouseX > posX && mouseX < posX + boxW) && (mouseY > posY && mouseY < posY + boxH)) return true;
+            if(     (mouseX > posX && mouseX < posX + boxW)
+                &&  (mouseY > posY && mouseY < posY + boxH)) return true;
             else return false;
         }
         
