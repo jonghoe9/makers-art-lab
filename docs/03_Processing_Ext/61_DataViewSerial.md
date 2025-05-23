@@ -1,10 +1,8 @@
-# 60. Data View
+# 61. Data View Serial
 
 센서값을 그래프로 출력하기
 
 ![실행한 모습](../img/sensorGraph.png)
-
-
 
 ## 아두이노 프로그램
 * 센서 2개를 읽고 시리얼로 출력한다.
@@ -41,45 +39,52 @@ void loop() {
 * 그래프 그리는 클라스를 사용한다.
 
 === "메인 코드"
-    ```java title="serialGraph.pde" linenums="1"
-    SensorGraphMatrix sgm1, sgm2;
+    ```java title="sensor_graph_serial.pde" linenums="1"
+    import processing.serial.*;
 
-    int cntDegree = 0;
+    Serial port;
+    SensorGraphMatrix sgm;
+
+    int val1, val2, val3;
 
     void setup() {
-        size(1000, 500);
+        size(1000, 300);
+        port = new Serial(this, "/dev/cu.usbmodem101", 115200);
         
-        sgm1 = new SensorGraphMatrix(60, 50, 700, 150);
-        sgm1.setDataMaxNColor(0, width, color(255, 0, 0));
-        sgm1.setDataMaxNColor(1, height, color(0, 0, 255));
-        
-        sgm2 = new SensorGraphMatrix("Mouse XYZ 20ms", 60, 280, 800, 150, 3, 20);
-        sgm2.setDataMaxNColor(0, width, color(255, 0, 0));
-        sgm2.setDataMaxNColor(1, height, color(0, 0, 255));
-        sgm2.setDataMaxNColor(2, 360, color(0, 255, 0));
+        sgm = new SensorGraphMatrix(60, 50, 802, 152, 3);
+        sgm.setInterval(2);
+        sgm.setTitle("Volume, Mic, Human Detector");
+        sgm.setDataMaxNColor(0, 1023, color(255, 0, 0));
+        sgm.setDataMaxNColor(1, 1023, color(0, 0, 255));
+        sgm.setDataMaxNColor(2, 1023, color(0, 255, 255));
     }
 
     void draw() {
         background(255);
-        
-        if(sgm1.isUpdate()) {
-            sgm1.add(0, mouseX);
-            sgm1.add(1, mouseY);
-        }
-        if(sgm2.isUpdate()) {
-            sgm2.add(0, mouseX);
-            sgm2.add(1, mouseY);
-            sgm2.add(2, 180 + sin(radians(cntDegree)) * 178);
-            cntDegree++;
-            if(cntDegree > 360) cntDegree = 0;
-        }
-        sgm1.draw();
-        sgm2.draw();
+        sgm.draw();
     }
 
     void mousePressed() {
-        if(sgm1.isClick()) sgm1.toggle();
-        if(sgm2.isClick()) sgm2.toggle();
+        if(sgm.isClick()) sgm.toggle();
+    }
+
+    void serialEvent(Serial port) {
+        String str = port.readStringUntil('\n');
+        if(str != null) {
+            String s = trim(str);
+            println(s);
+            String[] new_val = split(s, ", ");
+            if(new_val.length == 3) {
+                val1 = int(trim(new_val[0]));
+                val2 = int(trim(new_val[1]));
+                val3 = int(trim(new_val[2]));
+                if(sgm.isUpdate()) {
+                    sgm.add(0, val1);
+                    sgm.add(1, val2);
+                    sgm.add(2, val3);
+                }
+            }
+        }
     }
     ```
 
@@ -296,8 +301,8 @@ void loop() {
         }
         
         Boolean isUpdate() {
-        if(chk_update) return true;
-        else return false;
+            if(chk_update) return true;
+            else return false;
         }
         
         void setPause() {
