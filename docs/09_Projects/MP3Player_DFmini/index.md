@@ -1,3 +1,3 @@
 # MP3 Player
 
-![MotionGen](../../img/dfplayer_pinmap.png)
+![DFPlayer PinMap](../../img/dfplayer_pinmap.png)
