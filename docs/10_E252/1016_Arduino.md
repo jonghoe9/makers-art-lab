@@ -89,6 +89,7 @@ void loop() {
 ## Code 5. 볼륨값이 특정 구간에 들어오면 LED 켜기
 ```cpp title="led-serial4.ino" linenums="1" hl_lines="4"
 const int led = 13;
+const int trigL = 500;
 
 void setup() {
   pinMode(led, OUTPUT);
@@ -101,18 +102,16 @@ void loop() {
   Serial.println(val);
 
   if(val > trigL) {
-    Serial.println("LED ON");
     digitalWrite(led, HIGH);
     delay(10);
   } else {
-    Serial.println("LED OFF");
     digitalWrite(led, LOW);
     delay(10);
   }
 }
 ```
 
-## Code 4. 서보모터 움직이기
+## Code 6. 서보모터 움직이기
 ```cpp title="servo.ino" linenums="1" hl_lines="1"
 #include <Servo.h>
 
@@ -140,16 +139,19 @@ void loop() {
 
 ```
 
-## Code 5. 볼륨으로 서보 모터 움직이기
+## Code 7. 볼륨으로 서보 모터 움직이기
 ```cpp title="serial-servo1.ino" linenums="1" hl_lines="4"
 #include <Servo.h>
+#define SERVO_PIN 9
+
 const int led = 13;
-const int servo_pin = 9;
+
+Servo sv;
 
 void setup() {
   pinMode(led, OUTPUT);
   Serial.begin(115200);
-  sv.attach(servo_pin);
+  sv.attach(SERVO_PIN);
 }
 
 void loop() {
@@ -161,7 +163,7 @@ void loop() {
 }
 ```
 
-## Code 6. 볼륨으로 서보 모터 움직이기, 범위제한
+## Code 8. 볼륨으로 서보 모터 움직이기, 범위제한
 ```cpp title="serial-servo2.ino" linenums="1" hl_lines="15"
 #include <Servo.h>
 const int led = 13;
