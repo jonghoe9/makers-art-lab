@@ -114,13 +114,12 @@ void loop() {
 ## Code 6. 서보모터 움직이기
 ```cpp title="servo.ino" linenums="1" hl_lines="1"
 #include <Servo.h>
-
-const int servoPin = 9;
+#define SERVO_PIN 9
 
 Servo sv;
 
 void setup() {
-  sv.attach(servoPin);
+  sv.attach(SERVO_PIN);
 }
 
 void loop() {
@@ -166,13 +165,16 @@ void loop() {
 ## Code 8. 볼륨으로 서보 모터 움직이기, 범위제한
 ```cpp title="serial-servo2.ino" linenums="1" hl_lines="15"
 #include <Servo.h>
+#define SERVO_PIN 9
+
 const int led = 13;
-const int servo_pin = 9;
+
+Servo sv;
 
 void setup() {
   pinMode(led, OUTPUT);
   Serial.begin(115200);
-  sv.attach(servo_pin);
+  sv.attach(SERVO_PIN);
 }
 
 void loop() {
