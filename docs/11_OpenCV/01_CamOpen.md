@@ -10,6 +10,7 @@ void setup() {
   cam = new Capture(this, width, height);
   //cam = new Capture(this, cameras[1]);
   //cam = new Capture(this, width, height, "pipeline:avfvideosrc device-index=2", 30);
+  //cam = new Capture(this, "FaceTime HD Camera");
   cam.start();
 }
 
