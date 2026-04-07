@@ -172,3 +172,61 @@ void draw() {
     line(mouseX, 0, mouseX, height);
 }
 ```
+
+
+```cpp title="ew_0507.ino" linenums="1" hl_lines="18-22"
+#include <Servo.h>          // 서보모터 라이브러리 포함
+
+#define PIN_SV 9            // 서보 제어 핀
+
+Servo sv;
+
+void setup() {
+  sv.attach(PIN_SV);
+}
+
+void loop() {
+    sv.write(0);
+    delay(1000);
+    sv.write(180);
+    delay(1000);
+}
+```
+
+```cpp title="ew_0508.ino" linenums="1" hl_lines="18-22"
+#include <Servo.h>
+
+#define PIN_SV 9
+
+Servo sv;
+
+void setup() {
+    Serial.begin(115200);
+    sv.attach(PIN_SV);
+}
+
+void loop() {
+    while(Serial.available() > 0) {
+        int val_sv1 = Serial.parseInt();
+        int val_sv2 = Serial.parseInt();    // 시리얼로 입력되는 숫자 갯수가 3개 들어오니 일단 읽기는 한다
+        int val_sv3 = Serial.parseInt();    // 시리얼로 입력되는 숫자 갯수가 3개 들어오니 일단 읽기는 한다
+        
+        val_sv1 = map(val_sv1, 0, 255, 0, 180);
+        val_sv1 = constrain(val_sv1, 0, 180);
+        
+        if(Serial.read() == '\n') {
+            sv.write(val_sv1);
+        }
+    }    
+}
+```
+
+# 터치 디자이너에서 시리얼로 숫자 3개를 보내보자
+
+![터치디자이너 시리얼 보내기](../img/261_05_td.png)
+
+- LFO : 신호 발생
+- Math : 신호 출력 범위 조절
+- Null : 출력 정리
+- Chop to Exec : 채널의 변화에서 뭔가(시리얼)를 실행한다
+- Seial : 출력 포트 지정
