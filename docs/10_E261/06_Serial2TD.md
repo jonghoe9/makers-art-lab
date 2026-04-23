@@ -1,5 +1,5 @@
-# 06. Arduino Serial Read + TD Write
-- 아두이노에서 시리얼 읽고, TD에서 시리얼 쓰기
+# 06. TD 2 Arduino
+- TD에서 시리얼 쓰기, 아두이노에서 시리얼 읽기
 
 ## Serial 포트로 RGB LED 제어하기
 
