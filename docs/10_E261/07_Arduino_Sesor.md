@@ -4,7 +4,6 @@
 - 센서 값 정리해서 시리얼로 쓰기
 - TD에서 시리얼로 읽고 그래프 표시하기
 - Sensor: HC-SR04
-- Sensor: 3축 센서 (LSM6DS3)
 - Sensor: Mic
 - 
 
